@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deep-think"
+version = "0.1.0"
+description = "Deep-Thinking Ratio analysis and Think@n inference utilities for causal language models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Open Source Maintainers" }]
+dependencies = [
+  "torch>=2.1",
+  "transformers>=4.45",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools]
+packages = ["deep_think"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
